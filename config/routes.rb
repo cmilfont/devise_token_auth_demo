@@ -4,6 +4,10 @@ Rails.application.routes.draw do
       mount_devise_token_auth_for 'User', at: '/auth'
   end
 
+  get 'api/products/members_only', to: 'products#members_only'
+
+  get 'api/products/camisas', to: 'products#camisas'
+
   #mount_devise_token_auth_for 'User', at: 'auth'
   mount_devise_token_auth_for 'Mang', at: 'mangs'
 

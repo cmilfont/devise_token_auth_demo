@@ -1,5 +1,5 @@
 class DemoUserController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_api_user!
 
   def members_only
     render json: {
